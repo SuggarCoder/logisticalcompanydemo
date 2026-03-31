@@ -1,5 +1,4 @@
 import { createMemo, For, createSignal, onCleanup, onMount } from 'solid-js';
-import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
 import BossTalkSection from './BossTalkSection';
@@ -60,7 +59,7 @@ export default function SectionIndexTop() {
                   'background-image': `url(${assetPath(serviceBackgrounds[item.bgUrl])})`
                 }}
               >
-                <A href="/us" class="block no-underline">{renderServiceCard(item)}</A>
+                <div class="block no-underline">{renderServiceCard(item)}</div>
               </div>
             )}
           </For>
@@ -79,12 +78,12 @@ export default function SectionIndexTop() {
             <p class="text-stone-400">{t('sectionIntro.heading')}</p>
           </div>
           <div class="flex justify-center gap-10">
-            <A href="/us" class="no-underline flex flex-row justify-between w-1/2">
+            <div class="no-underline flex flex-row justify-between w-1/2">
               <p class="text-[#ff3f39] text-sm cursor-pointer">{t('sectionIntro.subtitle')}</p>
               <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path d="M481.834667 737.834667l60.330666 60.330666L828.330667 512l-286.165334-286.165333-60.330666 60.330666L665.002667 469.333333H256v85.333334h409.002667z" fill="#ff3f39" />
               </svg>
-            </A>
+            </div>
           </div>
         </div>
       </div>

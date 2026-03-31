@@ -1,9 +1,9 @@
-﻿import { createMemo, For, onCleanup, onMount, createSignal } from 'solid-js';
+import { createMemo, For, onCleanup, onMount, createSignal } from 'solid-js';
 import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { LogoSVG } from '~/libs/const';
 
-const ACTIVE_ROUTES = new Set(['/', '/us']);
+const ACTIVE_ROUTES = new Set(['/']);
 
 export default function Footer() {
   const [viewport, setViewport] = createSignal({ width: 0, height: 0 });
@@ -44,13 +44,13 @@ export default function Footer() {
   const SocialLinks = () => (
     <div className=":uno: sm:flex sm:items-center sm:justify-between mt-4">
       <span className="text-xs text-gray-500 sm:text-center">
-        © 2025{' '}
+        ? 2025{' '}
         <span className="text-white">SJIUS</span>
         . All Rights Reserved.
       </span>
       <div>
         <a href="https://beian.miit.gov.cn" class="text-stone-500 no-underline text-xs">
-          铚€ICP澶?025118242鍙?1 铚€ICP澶?025118242鍙?2
+          蜀ICP�?025118242�?1 蜀ICP�?025118242�?2
         </a>
       </div>
       <div className="flex mt-4 sm:justify-center sm:mt-0"></div>
@@ -251,4 +251,3 @@ export default function Footer() {
     </footer>
   );
 }
-

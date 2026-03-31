@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "@solidjs/start/config";
+import { defineConfig } from "@solidjs/start/config";
 import UnoCSS from "unocss/vite";
 
 const rawBasePath = process.env.BASE_PATH || "/";
@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     baseURL: basePath,
     prerender: {
-      routes: ["/", "/us"]
+      routes: ["/"]
     }
   },
   vite: ({ router }) => ({

@@ -1,4 +1,4 @@
-﻿import { A } from "@solidjs/router";
+import { A } from "@solidjs/router";
 
 export default function NotFound() {
   return (
@@ -20,10 +20,6 @@ export default function NotFound() {
       <p class="my-4">
         <A href="/" class="text-sky-600 hover:underline">
           Home
-        </A>
-        {" - "}
-        <A href="/us" class="text-sky-600 hover:underline">
-          About Us
         </A>
       </p>
     </main>

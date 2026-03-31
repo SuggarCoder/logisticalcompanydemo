@@ -1,5 +1,4 @@
 import { For } from 'solid-js';
-import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
 import { Carousel } from '~/components/Carousel';
@@ -52,9 +51,9 @@ export default function TopCarousel() {
                 ]}
               >
                 {({ text, classes }) => (
-                  <A href="/us" class={`inline-block px-8 py-5 no-underline transition rounded-full duration-300 ${classes}`}>
+                  <button type="button" class={`px-8 py-5 no-underline transition rounded-full duration-300 ${classes}`}>
                     {text}
-                  </A>
+                  </button>
                 )}
               </For>
             </div>
