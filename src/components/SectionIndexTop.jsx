@@ -1,4 +1,4 @@
-﻿import { createMemo, For, createSignal, onCleanup, onMount } from 'solid-js';
+import { createMemo, For, createSignal, onCleanup, onMount } from 'solid-js';
 import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
@@ -60,7 +60,7 @@ export default function SectionIndexTop() {
                   'background-image': `url(${assetPath(serviceBackgrounds[item.bgUrl])})`
                 }}
               >
-                <div class="no-underline cursor-default">{renderServiceCard(item)}</div>
+                <A href="/us" class="block no-underline">{renderServiceCard(item)}</A>
               </div>
             )}
           </For>

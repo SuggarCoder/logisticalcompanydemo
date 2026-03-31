@@ -1,4 +1,5 @@
-﻿import { For } from 'solid-js';
+import { For } from 'solid-js';
+import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
 import { Carousel } from '~/components/Carousel';
@@ -46,14 +47,14 @@ export default function TopCarousel() {
             <div class="mt-10">
               <For
                 each={[
-                  { text: t('hero.buttons.ourServices'), classes: 'bg-red-600 hover:bg-red-500 text-red-100', id: 'services' },
-                  { text: t('hero.buttons.aboutUs'), classes: 'bg-white hover:bg-red-600 hover:text-white text-stone-9 ml-4', id: 'contact' }
+                  { text: t('hero.buttons.ourServices'), classes: 'bg-red-600 hover:bg-red-500 text-red-100' },
+                  { text: t('hero.buttons.aboutUs'), classes: 'bg-white hover:bg-red-600 hover:text-white text-stone-9 ml-4' }
                 ]}
               >
                 {({ text, classes }) => (
-                  <button class={`px-8 py-5 no-underline transition rounded-full duration-300 ${classes}`}>
+                  <A href="/us" class={`inline-block px-8 py-5 no-underline transition rounded-full duration-300 ${classes}`}>
                     {text}
-                  </button>
+                  </A>
                 )}
               </For>
             </div>
