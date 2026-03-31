@@ -1,8 +1,16 @@
 ﻿import { createMemo, For, createSignal, onCleanup, onMount } from 'solid-js';
-import { A } from "@solidjs/router";
+import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
+import { assetPath } from '~/libs/paths';
 import BossTalkSection from './BossTalkSection';
 import IntroCard from './IntroCard';
+
+const serviceBackgrounds = {
+  cargo: 'imgs/s2.jpg',
+  warehouse: 'imgs/warehouse.jpg',
+  depots: 'imgs/s4.jpg',
+  finance: 'imgs/finance.jpg'
+};
 
 export default function SectionIndexTop() {
   const [t] = useI18n();
@@ -24,7 +32,6 @@ export default function SectionIndexTop() {
 
     observer.observe(topRefs);
     observer.observe(carRefs);
-
     onCleanup(() => observer.disconnect());
   };
 
@@ -32,24 +39,28 @@ export default function SectionIndexTop() {
 
   const renderServiceCard = item => (
     <div class="flex items-center transition-colors duration-300 h-full bg-[#121c45] p-[62px_30px] hover:bg-[#ff3f39cc]">
-      <img class="max-w-full w-[60px] h-[59px] mr-[20px]" alt={item.title} src={item.imageUrl} />
+      <img class="max-w-full w-[60px] h-[59px] mr-[20px]" alt={item.title} src={assetPath(item.imageUrl)} />
       <h4 class="text-white font-bold text-3xl" innerHTML={item.title} />
     </div>
   );
 
   return (
-    <div class="bg-no-repeat bg-cover w-full relative bg-[url('imgs/WorlMap.png')] bgPositionChange -mt-25">
+    <div
+      class="bg-no-repeat bg-cover w-full relative bgPositionChange -mt-25"
+      style={{ 'background-image': `url(${assetPath('imgs/WorlMap.png')})` }}
+    >
       <div class="mx-auto relative container max-w-7xl min-h-screen">
         <div id="topRefs" class="grid gap-4 px-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" ref={topRefs}>
           <For each={data()}>
             {(item, index) => (
               <div
-                class={`bg-center bg-no-repeat bg-cover ${item.bgUrl} ${isTopVisible() ? 'animate__animated animate__fadeInUp' : ''}`}
-                style={{ 'animation-delay': `${index() * 0.1}s` }}
+                class={`bg-center bg-no-repeat bg-cover ${isTopVisible() ? 'animate__animated animate__fadeInUp' : ''}`}
+                style={{
+                  'animation-delay': `${index() * 0.1}s`,
+                  'background-image': `url(${assetPath(serviceBackgrounds[item.bgUrl])})`
+                }}
               >
-                <div class="no-underline cursor-default">
-                  {renderServiceCard(item)}
-                </div>
+                <div class="no-underline cursor-default">{renderServiceCard(item)}</div>
               </div>
             )}
           </For>
@@ -59,13 +70,7 @@ export default function SectionIndexTop() {
 
         <div id="carRefs" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 px-4 mt-32" ref={carRefs}>
           <For each={cards()}>
-            {(card, index) => (
-              <IntroCard
-                card={card}
-                index={index}
-                isVisible={isCarVisible}
-              />
-            )}
+            {(card, index) => <IntroCard card={card} index={index} isVisible={isCarVisible} />}
           </For>
         </div>
 
@@ -77,10 +82,7 @@ export default function SectionIndexTop() {
             <A href="/us" class="no-underline flex flex-row justify-between w-1/2">
               <p class="text-[#ff3f39] text-sm cursor-pointer">{t('sectionIntro.subtitle')}</p>
               <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  d="M481.834667 737.834667l60.330666 60.330666L828.330667 512l-286.165334-286.165333-60.330666 60.330666L665.002667 469.333333H256v85.333334h409.002667z"
-                  fill="#ff3f39"
-                />
+                <path d="M481.834667 737.834667l60.330666 60.330666L828.330667 512l-286.165334-286.165333-60.330666 60.330666L665.002667 469.333333H256v85.333334h409.002667z" fill="#ff3f39" />
               </svg>
             </A>
           </div>

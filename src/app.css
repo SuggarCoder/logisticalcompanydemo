@@ -1,39 +1,33 @@
-/* 整个滚动条 */
+/* 整个滚动�?*/
 ::-webkit-scrollbar {
-    width: 4px; /* 滚动条宽度 */
-    height: 4px; /* 横向滚动条高度 */
+    width: 4px;
+    height: 4px;
 }
-  
-  /* 滚动条轨道 */
-  ::-webkit-scrollbar-track {
-    background-color: #e5e7eb; /* bg-gray-200 */
+
+::-webkit-scrollbar-track {
+    background-color: #e5e7eb;
 }
-  
-  /* 滚动条滑块 */
-  ::-webkit-scrollbar-thumb {
-    background-color: #6b7280; /* bg-gray-500 */
-    border-radius: 4px; /* rounded-md */
+
+::-webkit-scrollbar-thumb {
+    background-color: #6b7280;
+    border-radius: 4px;
 }
-  
-  /* 滑块悬浮状态 */
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #4b5563; /* bg-gray-700 */
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4b5563;
 }
-  
-  /* 滚动条两端按钮隐藏 */
-  ::-webkit-scrollbar-button {
+
+::-webkit-scrollbar-button {
     display: none;
 }
 
 .cursor {
-  position: absolute; 
+  position: absolute;
   top: -0.5vw;
   left: -0.5vw;
   z-index: 2;
-  
   width: 1vw;
   height: 1vw;
-  
   pointer-events: none;
   background: #bbb;
   border-radius: 50%;
@@ -41,79 +35,25 @@
   transform: translate3d(var(--x), var(--y), 0);
 }
 
-/* 图片基础样式 */
 .carousel-cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1); /* 初始缩放比例 */
-  transition: transform 5s linear; /* 在 4 秒内平滑过渡 */
+  transform: scale(1);
+  transition: transform 5s linear;
 }
 
-/* 当前选中图片：逐渐放大 */
 .carousel-cell.is-selected img {
-  transform: scale(1.1); /* 放大 10% */
+  transform: scale(1.1);
 }
 
 .bg-customer {
   image-rendering: pixelated;
   flex-shrink: 0;
   background-size: 100% 100%;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 162 80"><path d="M 65.016 80 L 15 80 C 6.716 80 0 73.284 0 65 L 0 15 C 0 6.716 6.716 0 15 0 L 127.385 0 C 134.108 0 139.559 5.45 139.559 12.174 L 139.559 13.127 C 139.559 19.324 144.582 24.347 150.779 24.347 C 156.976 24.347 162 29.371 162 35.568 L 162 42.143 C 162 50.427 155.284 57.143 147 57.143 L 87.873 57.143 C 81.561 57.143 76.444 62.26 76.444 68.571 C 76.444 74.883 71.328 80 65.016 80 Z" fill="rgb(255,255,255)"></path></svg>')
-}
-.cargo {
-  background-image: url(imgs/s2.jpg);
-}
-
-.warehouse {
-  background-image: url(imgs/warehouse.jpg);
-}
-
-.depots {
-  background-image: url(imgs/s4.jpg);
-}
-
-.finance {
-  background-image: url(imgs/finance.jpg);
-}
-
-.uscargo {
-  background-image: url(imgs/u04.jpg);
-}
-
-.uswarehouse {
-  background-image: url(imgs/w02.jpg);
-}
-
-.usdepots {
-  background-image: url(imgs/warehouse05.jpg);
-}
-
-.usfinance {
-  background-image: url(imgs/fintec.jpg);
-}
-/* Hover 样式 */
-.fast:hover {
-  background-image: url(imgs/fast.png);
-  background-position: 115% 15%;
-  background-repeat: no-repeat;
-  background-size: 40%;
-}
-
-.tracking:hover {
-  background-image: url(imgs/tracking.png);
-  background-position: 115% 15%;
-  background-repeat: no-repeat;
-  background-size: 40%;
-}
-
-.team:hover {
-  background-image: url(imgs/team.png);
-  background-position: 115% 15%;
-  background-repeat: no-repeat;
-  background-size: 40%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 162 80"><path d="M 65.016 80 L 15 80 C 6.716 80 0 73.284 0 65 L 0 15 C 0 6.716 6.716 0 15 0 L 127.385 0 C 134.108 0 139.559 5.45 139.559 12.174 L 139.559 13.127 C 139.559 19.324 144.582 24.347 150.779 24.347 C 156.976 24.347 162 29.371 162 35.568 L 162 42.143 C 162 50.427 155.284 57.143 147 57.143 L 87.873 57.143 C 81.561 57.143 76.444 62.26 76.444 68.571 C 76.444 74.883 71.328 80 65.016 80 Z" fill="rgb(255,255,255)"></path></svg>');
 }
 
 .bgPositionChange {
-  background-position: center 100px
+  background-position: center 100px;
 }

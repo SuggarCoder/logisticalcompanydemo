@@ -1,5 +1,6 @@
 import { For, createMemo, createSignal, onMount, onCleanup} from 'solid-js'
 import { useI18n } from '~/libs/i18n'
+import { assetPath } from '~/libs/paths';
 import { Carousel } from '~/components/Carousel';
 
 export default function CaseShow() {
@@ -22,13 +23,10 @@ export default function CaseShow() {
     
     onMount(async () => {
         await customElements.whenDefined('spline-viewer');
-        // 1) 监听官方事件：load-complete
         viewer.addEventListener('load-complete', () => {
-            // a. 禁掉配置，防止之后又把 logo 显示回来
             viewer['_spline']?.data?.scene?.publish?.settings?.web &&
             (viewer['_spline'].data.scene.publish.settings.web.logo = false);
 
-            // b. 删除已插入的 logo 节点
             viewer.shadowRoot?.querySelector('#logo')?.remove();
         });
     });
@@ -71,7 +69,7 @@ export default function CaseShow() {
                                             </div>
                                             <div class="sm:w-1/3 text-center sm:py-8">
                                                 <div class="w-full inline-flex items-center justify-center text-gray-400">
-                                                    <img src={item.img} alt={item.name} class='object-cover w-full' />
+                                                    <img src={assetPath(item.img)} alt={item.name} class='object-cover w-full' />
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +96,7 @@ export default function CaseShow() {
                                 }`}
                             >
                                 <img 
-                                    src={item.img} 
+                                    src={assetPath(item.img)} 
                                     alt={item.name}
                                     class="object-cover w-full h-full"
                                 />

@@ -1,18 +1,18 @@
-import { createEffect, createMemo, createSignal, For, onCleanup, onMount, Show } from 'solid-js';
+﻿import { createEffect, createMemo, createSignal, For, onCleanup, onMount, Show } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import { useI18n } from '~/libs/i18n';
+import { assetPath } from '~/libs/paths';
 import { IconCar, IconPath } from '~/libs/const';
 
-// 全局图片缓存，避免重复加载
 const loadedImagesCache = new Map();
 
-// 图片预加载函数，返回 Promise 便于异步处理
 function preloadImage(src) {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     if (loadedImagesCache.has(src)) {
       resolve();
       return;
     }
+
     const img = new Image();
     img.src = src;
     img.onload = () => {
@@ -23,46 +23,37 @@ function preloadImage(src) {
   });
 }
 
-// LazyImage 组件，利用 IntersectionObserver 实现懒加载
 function LazyImage(props) {
   const [isIntersecting, setIntersecting] = createSignal(false);
   let imgRef;
+
   onMount(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIntersecting(true);
           observer.unobserve(entry.target);
         }
       });
     });
+
     if (imgRef) observer.observe(imgRef);
     onCleanup(() => observer.disconnect());
   });
-  return (
-    <img
-      ref={imgRef}
-      src={isIntersecting() ? props.src : ''}
-      loading="lazy"
-      class={props.class}
-      alt={props.alt}
-      onLoad={props.onLoad}
-    />
-  );
+
+  return <img ref={imgRef} src={isIntersecting() ? props.src : ''} loading="lazy" class={props.class} alt={props.alt} onLoad={props.onLoad} />;
 }
 
 export default function Warehouse() {
   const [activeTab, setActiveTab] = createSignal(0);
-  const [store, setStore] = createStore({
-    indicatorStyle: { left: '0px', width: '0px', top: '0px' },
-  });
+  const [store, setStore] = createStore({ indicatorStyle: { left: '0px', width: '0px', top: '0px' } });
   const [t] = useI18n();
   const data = createMemo(() => t('warehouse'));
   const [imagesLoaded, setImagesLoaded] = createSignal(false);
 
-  let tabsContainerRef, indicatorRef;
+  let tabsContainerRef;
+  let indicatorRef;
 
-  // 更新下划线指示器位置
   const updateIndicator = () => {
     if (!tabsContainerRef || !indicatorRef) return;
     const activeTabElement = tabsContainerRef.querySelector(`[data-index="${activeTab()}"]`);
@@ -72,7 +63,7 @@ export default function Warehouse() {
       setStore('indicatorStyle', {
         left: `${left - containerRect.left}px`,
         width: `${width}px`,
-        top: `${top - containerRect.top + height}px`,
+        top: `${top - containerRect.top + height}px`
       });
     }
   };
@@ -88,25 +79,19 @@ export default function Warehouse() {
     onCleanup(() => window.removeEventListener('resize', onResize));
   });
 
-  // 页面加载时预加载所有图片（非阻塞方式，仅启动预加载，不影响页面渲染）
   onMount(() => {
-    const images = data()?.map((item) => `imgs/${item.img}`) || [];
+    const images = data()?.map(item => assetPath(`imgs/${item.img}`)) || [];
     images.forEach(src => preloadImage(src));
   });
 
-  // 切换 tab 时主动预加载当前图片
-  const handleTabChange = (index) => {
+  const handleTabChange = index => {
     setActiveTab(index);
-    const src = `imgs/${data()[index].img}`;
-    preloadImage(src).then(() => {
-      setImagesLoaded(true);
-    });
+    const src = assetPath(`imgs/${data()[index].img}`);
+    preloadImage(src).then(() => setImagesLoaded(true));
   };
 
-  // 鼠标悬停时提前预加载目标图片
-  const handleTabMouseEnter = (tab) => {
-    const src = `imgs/${tab.img}`;
-    preloadImage(src);
+  const handleTabMouseEnter = tab => {
+    preloadImage(assetPath(`imgs/${tab.img}`));
   };
 
   const ImageSection = () => {
@@ -114,12 +99,7 @@ export default function Warehouse() {
     return (
       <div class="overflow-hidden sm:px-12 md:w-1/2 -m-4 sm:-mx-12 md:mx-0 md:overflow-visible md:px-0">
         <div class="relative">
-          <LazyImage
-            src={`imgs/${currentData()?.img}`}
-            alt={currentData()?.name}
-            class={`mx-auto w-full border object-cover dark:border-transparent min-h-[28rem] transition-opacity duration-300 ${imagesLoaded() ? 'opacity-100' : 'opacity-0'}`}
-            onLoad={() => setImagesLoaded(true)}
-          />
+          <LazyImage src={assetPath(`imgs/${currentData()?.img}`)} alt={currentData()?.name} class={`mx-auto w-full border object-cover dark:border-transparent min-h-[28rem] transition-opacity duration-300 ${imagesLoaded() ? 'opacity-100' : 'opacity-0'}`} onLoad={() => setImagesLoaded(true)} />
           {!imagesLoaded() && (
             <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
               <div class="h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
@@ -132,7 +112,7 @@ export default function Warehouse() {
 
   return (
     <Show when={data() && data().length > 0} fallback={<div class="text-white text-center p-8">Loading warehouse data...</div>}>
-      <div id="about" class="bg-center bg-no-repeat bg-cover bg-fixed text-white bg-[url('imgs/w00.webp')]">
+      <div id="about" class="bg-center bg-no-repeat bg-cover bg-fixed text-white" style={{ 'background-image': `url(${assetPath('imgs/w00.webp')})` }}>
         <div class="bg-[#121c45e6] pb-25">
           <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
             <div class="pt-40 text-center">
@@ -142,41 +122,23 @@ export default function Warehouse() {
               <div ref={tabsContainerRef} class="grid grid-cols-3 sm:flex justify-between sm:flex-wrap sm:gap-4 pb">
                 <For each={data()}>
                   {(tab, index) => (
-                    <button
-                      data-index={index()}
-                      role="tab"
-                      aria-selected={activeTab() === index()}
-                      tabIndex={activeTab() === index() ? 0 : -1}
-                      onMouseEnter={() => handleTabMouseEnter(tab)}
-                      onClick={() => handleTabChange(index())}
-                      class={`text-center py-4 px-4 text-sm font-medium transition-colors duration-200 sm:border-none focus:outline-none ${
-                        activeTab() === index() ? 'text-white' : 'text-blue-400 hover:text-red-600'
-                      }`}
-                    >
+                    <button data-index={index()} role="tab" aria-selected={activeTab() === index()} tabIndex={activeTab() === index() ? 0 : -1} onMouseEnter={() => handleTabMouseEnter(tab)} onClick={() => handleTabChange(index())} class={`text-center py-4 px-4 text-sm font-medium transition-colors duration-200 sm:border-none focus:outline-none ${activeTab() === index() ? 'text-white' : 'text-blue-400 hover:text-red-600'}`}>
                       {tab.name}
                     </button>
                   )}
                 </For>
               </div>
-              <div
-                ref={indicatorRef}
-                class="absolute transition-all duration-300 hidden h-0.5 bg-blue-400 ease-in-out sm:block"
-                style={store.indicatorStyle}
-              />
+              <div ref={indicatorRef} class="absolute transition-all duration-300 hidden h-0.5 bg-blue-400 ease-in-out sm:block" style={store.indicatorStyle} />
             </div>
             <div class="mt-20">
               <div class="md:flex gap-6 space-y-12 md:space-y-0">
                 <div class="relative md:w-1/2">
-                  <h3 class="text-2xl font-bold text-white md:text-3xl pl-4 border-l-4 border-red-500">
-                    {t('warehouseSection.extra')}
-                  </h3>
+                  <h3 class="text-2xl font-bold text-white md:text-3xl pl-4 border-l-4 border-red-500">{t('warehouseSection.extra')}</h3>
                   <p class="text-stone-400 mt-8">{t('warehouseSection.description')}</p>
                   <div class="mt-12 space-y-6">
                     <div class="flex items-center gap-6">
                       <IconCar size="w-6" color="#ffffff" />
-                      <p>
-                        {data()?.[activeTab()]?.capacity} <sup>cars/units</sup>
-                      </p>
+                      <p>{data()?.[activeTab()]?.capacity} <sup>cars/units</sup></p>
                     </div>
                     <div class="flex items-center gap-6">
                       <IconPath size="w-6" color="#ffffff" />

@@ -14,8 +14,11 @@ export default defineConfig({
       routes: ["/", "/us"]
     }
   },
-  vite: {
-    base: basePath,
+  vite: ({ router }) => ({
+    base: router === "client" ? `${basePath}_build/` : basePath,
+    define: {
+      "import.meta.env.PUBLIC_BASE_URL": JSON.stringify(basePath)
+    },
     plugins: [UnoCSS()]
-  }
+  })
 });

@@ -1,5 +1,6 @@
-import {  createMemo } from 'solid-js'
-import { useI18n } from '~/libs/i18n' // Import the useI18n hook
+import { createMemo } from 'solid-js'
+import { useI18n } from '~/libs/i18n'
+import { assetPath } from '~/libs/paths';
 import { Carousel } from '~/components/Carousel';
 
 const FLICKITY_OPTIONS = {
@@ -33,30 +34,34 @@ export default function Testimonal() {
     </svg>
   )
 
-  const TestimonialCard = props => (
-    <div class="w-full testimonial-cell md:w-[40%] mr-4">
-      <div class="bg-white flex flex-col items-stretch p-8 relative justify-start shadow-[7px_7px_50px_#0000001a] h-50">
-        <div class="flex justify-center color-customer-red">
-          {[...Array.from({ length: 5 })].map((_, i) => (
-            <StarIcon filled={i < props.testimonial.rate} />
-          ))}
+  const TestimonialCard = props => {
+    const avatarSrc = assetPath(`imgs/avatar${String(props.index % 5 + 1).padStart(2, '0')}.jpg`);
+
+    return (
+      <div class="w-full testimonial-cell md:w-[40%] mr-4">
+        <div class="bg-white flex flex-col items-stretch p-8 relative justify-start shadow-[7px_7px_50px_#0000001a] h-50">
+          <div class="flex justify-center color-customer-red">
+            {[...Array.from({ length: 5 })].map((_, i) => (
+              <StarIcon filled={i < props.testimonial.rate} />
+            ))}
+          </div>
+          <h4>
+            {props.testimonial.comment}
+          </h4>
         </div>
-        <h4>
-          {props.testimonial.comment}
-        </h4>
-      </div>
-      <div class="flex mt-5">
-        <div
-          class="bg-center bg-cover rounded-full w-[40px] h-[40px] mr-[30px]"
-          style={`background-image: url('imgs/avatar${String(props.index % 5 + 1).padStart(2, '0')}.jpg')`}
-        />
-        <div class="text-left">
-          <h5>{props.testimonial.name}</h5>
-          <h6>{props.testimonial.position}</h6>
+        <div class="flex mt-5">
+          <div
+            class="bg-center bg-cover rounded-full w-[40px] h-[40px] mr-[30px]"
+            style={{ 'background-image': `url(${avatarSrc})` }}
+          />
+          <div class="text-left">
+            <h5>{props.testimonial.name}</h5>
+            <h6>{props.testimonial.position}</h6>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    );
+  };
 
   return (
     <div class="mt-5 relative h-75">
