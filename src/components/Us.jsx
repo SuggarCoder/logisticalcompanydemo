@@ -1,11 +1,11 @@
-﻿import { createMemo, For, createSignal } from 'solid-js';
+import { createMemo, For, createSignal } from 'solid-js';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
 
 export default function ChooseUs() {
   const [t] = useI18n();
-  const features = createMemo(() => t('chooseUs.features'));
-  const data = createMemo(() => t('question.contents'));
+  const features = createMemo(() => t('chooseUs.features') || []);
+  const data = createMemo(() => t('question.contents') || []);
   const [openIndex, setOpenIndex] = createSignal(null);
 
   return (
@@ -56,7 +56,7 @@ export default function ChooseUs() {
                         </span>
                       </button>
                     </dt>
-                    <dd ref={contentRef} class="block overflow-hidden pr-12 duration-300 ease-in-out" style={{ height: openIndex() === index() ? `${contentRef?.scrollHeight}px` : '0px' }}>
+                    <dd ref={contentRef} class="block overflow-hidden pr-12 duration-300 ease-in-out" style={{ height: openIndex() === index() ? `${contentRef?.scrollHeight || 0}px` : '0px' }}>
                       <p class="pb-6 text-base text-stone-400">{item.answer}</p>
                     </dd>
                   </dl>

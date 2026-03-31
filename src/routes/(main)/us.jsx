@@ -1,4 +1,4 @@
-﻿import { createMemo, For } from 'solid-js';
+import { createMemo, For } from 'solid-js';
 import { A } from '@solidjs/router';
 import { useI18n } from '~/libs/i18n';
 import { assetPath } from '~/libs/paths';
@@ -14,8 +14,8 @@ const aboutCardBackgrounds = {
 
 export default function AboutPage() {
   const [t] = useI18n();
-  const about = createMemo(() => t('about') || {});
-  const services = createMemo(() => about().services || []);
+  const about = createMemo(() => t('contact.about') || t('about') || {});
+  const services = createMemo(() => t('contact.services') || t('services') || []);
 
   return (
     <div class="bg-no-repeat bg-cover overflow-x-hidden" style={{ 'background-image': `url(${assetPath('imgs/WorlMap.png')})` }}>
@@ -24,11 +24,11 @@ export default function AboutPage() {
         <div class="relative mx-auto max-w-7xl px-4 pb-24 pt-32 md:pb-32 md:pt-40">
           <div class="max-w-3xl">
             <p class="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#ffaea9]">SJIUS</p>
-            <h1 class="text-4xl font-bold leading-tight md:text-6xl">{about().title}</h1>
-            <p class="mt-8 max-w-2xl text-base leading-8 text-stone-300 md:text-lg" innerHTML={about().description} />
+            <h1 class="text-4xl font-bold leading-tight md:text-6xl">{about().title || 'About SJIUS'}</h1>
+            <p class="mt-8 max-w-2xl text-base leading-8 text-stone-300 md:text-lg" innerHTML={about().description || ''} />
             <div class="mt-10 flex flex-wrap gap-4">
               <A href="/" class="rounded-full bg-[#ff3f39] px-8 py-4 text-sm font-semibold text-white no-underline transition duration-300 hover:bg-[#ff6b66]">{t('menu.0.label')}</A>
-              <button type="button" class="rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-semibold text-white transition duration-300">{t('menu.5.label')}</button>
+              <A href="/us" class="rounded-full border border-white/30 bg-transparent px-8 py-4 text-sm font-semibold text-white no-underline transition duration-300">{t('menu.5.label')}</A>
             </div>
           </div>
         </div>
