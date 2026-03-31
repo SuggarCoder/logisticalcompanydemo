@@ -9,6 +9,7 @@ const basePath =
 
 export default defineConfig({
   server: {
+    baseURL: basePath,
     prerender: {
       routes: ["/", "/us"]
     }
