@@ -1,0 +1,759 @@
+{
+    "address": "China (SiChuan ShuangLiu) Used Car Export Base. No. 1599, South Section of ChengShuang Avenue, ShuangLiu District, Chengdu, SiChuan, China.",
+    "menu": [
+    {
+      "label": "Home",
+      "href": "/",
+      "icon": "ant-design:home-outlined",
+      "id": "home"
+    },
+    {
+      "label": "Land Freight",
+      "href": "/cargo",
+      "icon": "ant-design:car-outlined",
+      "id": "services"
+    },
+    {
+      "label": "Supervised Warehouses",
+      "href": "/warehouse",
+      "icon": "ant-design:docker-outlined",
+      "id": "services"
+    },
+    {
+      "label": "Depots",
+      "href": "/depots",
+      "icon": "ant-design:gold-twotone",
+      "id": "services"
+    },
+    {
+      "label": "Financial Services",
+      "href": "/finance",
+      "icon": "ant-design:account-book-outlined",
+      "id": "services"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/us",
+      "icon": "ant-design:team-outlined",
+      "id": "us"
+    }
+    ],
+    "hero": {
+      "heading": "Providing Comprehensive Supply Chain Services to Customers",
+      "description": "Continuously improving supply chain management capabilities to deliver exceptional logistics and supply chain services to global customers.",
+      "buttons": {
+        "ourServices": "Our Services",
+        "aboutUs": "About Us"
+      }
+    },
+    "footer": [
+    {
+      "title": "Services",
+      "links": [
+        {
+          "label": "Land Freight",
+          "href": "/cargo"
+        },
+        {
+          "label": "Supervised Warehouses",
+          "href": "/warehouse"
+        },
+        {
+          "label": "Depots Services",
+          "href": "/depots"
+        },
+        {
+          "label": "Financial Services",
+          "href": "/finance"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "News",
+          "href": "/news"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "links": [
+        {
+          "label": "Chinese",
+          "code": "cn"
+        },
+        {
+          "label": "English",
+          "code": "en"
+        },
+        {
+          "label": "Russian",
+          "code": "ru"
+        }
+      ]
+    }
+    ],
+    "locations": [
+      {
+        "continent": "Europe",
+        "countries": [
+          {
+            "name": "Belgium",
+            "cities": [
+              "Antwerp",
+              "Brussels"
+            ]
+          },
+          {
+            "name": "Germany",
+            "cities": [
+              "Hamburg",
+              "Berlin",
+              "Frankfurt",
+              "Düsseldorf"
+            ]
+          }
+        ]
+      },
+      {
+        "continent": "Central Asia",
+        "countries": [
+          {
+            "name": "Kazakhstan",
+            "cities": [
+              "Almaty"
+            ]
+          },
+          {
+            "name": "Kyrgyzstan",
+            "cities": [
+              "Bishkek"
+            ]
+          }
+        ]
+      },
+      {
+        "continent": "Asia",
+        "countries": [
+          {
+            "name": "China",
+            "cities": [
+              "Khorgos",
+              "Chengdu",
+              "Beijing",
+              "Guangzhou",
+              "Hong Kong",
+              "Shenzhen",
+              "Shanghai"
+            ]
+          }
+        ]
+      }
+    ],
+    "comments": [
+      {
+        "name": "Abdullah Habib",
+        "position": "Operations Director - Al-Man Logistics Company",
+        "comment": "Our company has consistently sought a stable and efficient freight partner. Since partnering with your firm, we have experienced a significant improvement in the efficiency and punctuality of our freight transportation. We would especially like to mention your customer service team for their prompt responses and effective issue resolution, which demonstrate a high level of professionalism. This exceptional service has greatly supported our supply chain management, and we look forward to a long-term cooperation.",
+        "rate": 5
+      },
+      {
+        "name": "Zalman Noor",
+        "position": "Procurement Director - Eurasia Industrial Group",
+        "comment": "SJIUS freight service is truly an industry benchmark. They offer real-time cargo tracking during transportation and excel in meeting delivery schedules. They have successfully handled numerous urgent transportation tasks with both quality and quantity, which gives our procurement department more confidence in delivery timelines. Thank you for your continued support!",
+        "rate": 4
+      },
+      {
+        "name": "Sabina Tokhtar",
+        "position": "Vice President of Sales - Alps Technology Co., Ltd.",
+        "comment": "Your logistics service has provided a strong support in our market expansion. Not only are the transportation costs reasonable, but the speed and punctuality are also excellent, with almost no mistakes or delays. Our company has greatly benefited from this and our sales network has expanded rapidly. Thank you for your hard work!",
+        "rate": 5
+      },
+      {
+        "name": "Artur Tursunov",
+        "position": "Head of Logistics Management Department - Tajikistan Auto Sales Co., Ltd.",
+        "comment": "Provided us with comprehensive logistics solutions, from cargo transportation to warehouse management, with excellent service throughout. Especially in the field of automotive freight, your company demonstrated a high level of professionalism, ensuring the safe and timely delivery of our vehicles. Such a partner is worth trusting for the long term!",
+        "rate": 5
+      },
+      {
+        "name": "Ali Bahati",
+        "position": "Supply Chain Director - Kazakhstan Manufacturing Co., Ltd.",
+        "comment": "As a manufacturing business, we have pretty strict logistics needs, but your firm has really won us over with your efficient and reliable services. Your attention to detail and flexible scheduling during transportation have made our production plans run a lot smoother. We're looking forward to working together in the future to create greater value!",
+        "rate": 4
+      }
+    ],
+    "carSection": {
+  "title": "Our Own Fleet Demo",
+  "content": [
+    {
+      "name": "Volvo <br> FH Series",
+      "description": "The Volvo FH Series is a highly efficient and reliable heavy-duty truck designed for long-distance transport. It features excellent fuel efficiency, driving comfort, and advanced safety technologies like the I-Shift transmission and dynamic steering system, enhancing operational efficiency and driving experience.",
+      "img": "imgs/volve.png"
+    },
+    {
+      "name": "DAF <br> XF Series",
+      "description": "The DAF XF Series, produced by the Dutch company DAF Trucks, is renowned for its outstanding long-distance transport performance, fuel efficiency, driving comfort, and safety. The XF Series offers a variety of configurations to meet diverse transport needs and is a key player in both European and global truck markets.",
+      "img": "imgs/daf.png"
+    },
+    {
+      "name": "Scania <br> R Series & S Series",
+      "description": "The Scania R Series and S Series are flagship heavy-duty trucks. The R Series is known for its powerful performance and fuel efficiency, making it suitable for long-haul transport. The S Series focuses on driver comfort and safety, featuring a spacious cabin and advanced driver assistance systems, ideal for premium long-distance transport.",
+      "img": "imgs/scania.png"
+    },
+    {
+      "name": "Dongfeng <br> Series",
+      "description": "Dongfeng trucks, known for series like Dragon, provide heavy-duty, medium-duty, and light-duty trucks widely used in long-distance transport, construction, and municipal applications. Their features include advanced technology, safety, reliability, and fuel efficiency, making them a leading global commercial vehicle brand.",
+      "img": "imgs/dongfeng.png"
+    },
+    {
+      "name": "MAN <br> TGX Series",
+      "description": "The MAN TGX Series is designed with the concept of 'efficient transport, reliable partner,' combining powerful performance, low fuel consumption, and eco-friendly emissions technology. It offers superior solutions for long-haul logistics and heavy-duty transport. Its spacious cabin and intelligent assistance systems enhance safety, driving comfort, and operational cost efficiency.",
+      "img": "imgs/man.png"
+    }
+  ]
+    },
+    "warehouse": [
+      {
+        "name": "Khorgos",
+        "address": "Xinjiang Uygur Autonomous Region, Ili Kazakh Autonomous Prefecture, Khorgos City, north side of Runyi Road and west side of National Highway 219",
+        "extra": "4 km from Khorgos Port",
+        "size": "19000",
+        "capacity": "1100",
+        "img": "w01.jpg"
+      },
+      {
+        "name": "Hamburg",
+        "address": "Germany, Hamburg, Dessauer Street 10, Warehouse 48, Postal Code 20457",
+        "extra": "5.4 km from Hamburg Station",
+        "size": "16000",
+        "capacity": "900",
+        "img": "w03.jpg"
+      },
+      {
+        "name": "Antwerp",
+        "address": "Belgium, Antwerp, Haminastraat 15, Postal Code 2030",
+        "extra": "1.5 km from Antwerp Port",
+        "size": "12000",
+        "capacity": "600",
+        "img": "w04.jpg"
+      },
+      {
+        "name": "Bishkek",
+        "address": "Tahmina Shop, Sokoluk, Kyrgyzstan",
+        "extra": "15 km from Bishkek City",
+        "size": "13000",
+        "capacity": "750",
+        "img": "w05.jpg"
+      },
+      {
+        "name": "Almaty",
+        "address": "Kazakhstan, Almaty City, Abai Avenue 44/2, Office <br> Kazakhstan, Almaty City, Suyunbai Avenue 54/1",
+        "extra": "10 km from Almaty City",
+        "size": "14000",
+        "capacity": "800",
+        "img": "w06.jpg"
+      }
+    ],
+    "chooseUs": {
+      "title": "Why We Are the Best",
+      "description": "We pride ourselves on providing the best transport and shipping services available worldwide. Our skilled team utilizes communication, tracking, and processing software, combined with decades of experience! Through integrated supply chain solutions, we deliver sustainable competitive advantages to our clients.",
+      "features": [
+        {
+          "img": "imgs/tracking.png",
+          "alt": "box icon",
+          "title": "Safety Assurance",
+          "text": "We take freight safety seriously. With comprehensive safety procedures and a sense of responsibility, we are dedicate to providing worry-free transportation for our clients."
+        },
+        {
+          "img": "imgs/calendar.png",
+          "alt": "calendar icon",
+          "title": "On-time Delivery",
+          "text": "Our service satisfaction is achieved through trustworthy and efficient, on-time delivery."
+        },
+        {
+          "img": "imgs/shippment.png",
+          "alt": "location icon",
+          "title": "Global Delivery",
+          "text": "Our logistics services cover a global range, connecting suppliers and clients without boundaries."
+        },
+        {
+          "img": "imgs/plane.png",
+          "alt": "plane icon",
+          "title": "Fast Transport",
+          "text": "Fast transportation, direct routes and borderless connections save your time. We know our clients!"
+        }
+      ]
+    },
+    "question": {
+    "heading": "Frequently Asked Questions",
+    "subtitle": "If you are unable to use online queries, you can directly call our 24-hour customer service hotline and provide your tracking number. Our customer service team will assist you with the inquiry and answer any related questions. For special transportation situations, such as international shipping or multi-stop transshipment, we will also send SMS or email reminders regularly to ensure you are always informed about the status of your goods.",
+    "contents": [
+      {
+        "question": "How do you ensure the safety of the cargo during loading and unloading?",
+        "answer": "We implement strict safety measures during every loading and unloading process. Our staff are professionally trained and use high-quality protective equipment such as straps, pads, and non-slip mats to secure the cargo. We also conduct regular vehicle inspections to ensure their condition is optimal and minimize the risk of damage."
+      },
+      {
+        "question": "What should I do if the cargo is damaged during transport?",
+        "answer": "We are committed to ensuring the integrity of the cargo. In the event of any accidental damage during transport, we offer compensation protection and will work with you to identify the cause of the issue. Please ensure that you inspect the cargo and take photos before loading and unloading to facilitate the claim process."
+      },
+      {
+        "question": "What measures are in place to prevent injuries during loading and unloading?",
+        "answer": "We strictly follow industry safety standards to ensure that all operators wear the necessary safety equipment and undergo regular safety training. During loading and unloading processes, we adhere to proper operational procedures and use mechanical assistance to minimize manual handling, thereby ensuring the safety of our workers."
+      },
+      {
+        "question": "How do you ensure that goods arrive on time and quickly?",
+        "answer": "We use an efficient transportation network and optimized route planning to ensure that each shipment is delivered in the shortest possible time. We collaborate with multiple transport companies to provide flexible scheduling solutions and track the location of each vehicle in real-time to ensure timely delivery."
+      },
+      {
+        "question": "How do you guarantee fast transport if there are traffic jams or unforeseen delays?",
+        "answer": "Our transportation team monitors traffic conditions in real-time and takes alternate routes when necessary to avoid delays. Additionally, we have an emergency response mechanism in place to quickly adjust transport plans and minimize any delays, ensuring that the goods are delivered as quickly as possible."
+      }
+    ]
+    },
+    "warehouseSection": {
+      "heading": "High-Quality Warehouse Management Model   Intelligent Warehouse Management System",
+      "title": "Our intelligent management system provides real-time monitoring to ensure smooth and uninterrupted logistics. We consistently adhere to a service philosophy that is professional, reliable, and efficient, dedicated to offering comprehensive logistics support to our clients. This helps our clients stand out in the competitive market. Choose us for a smarter and more efficient future!",
+      "description": "Building on our five domestic and international automobile warehouses in Khorgos, Hamburg, Antwerp, Bishkek and Almaty, we are continuously developing and enhancing our ”global automobile warehouse” network.",
+      "extra": "SJIUS offers efficient and customized warehousing solutions, covering every aspect of automobile trade logistics. We warmly welcome traders from around the world to exchange inquiries!"
+    },
+    "cardService": [
+        {
+          "title": "Land Freight",
+          "imageUrl": "imgs/cargo.png",
+          "bgUrl": "cargo"
+        },
+        {
+          "title": "Supervised Warehouses",
+          "imageUrl": "imgs/warehouse.png",
+          "bgUrl": "warehouse"
+        },
+        {
+          "title": "Depots Services",
+          "imageUrl": "imgs/depots.png",
+          "bgUrl": "depots"
+        },
+        {
+          "title": "Financial Services",
+          "imageUrl": "imgs/finance.png",
+          "bgUrl": "finance"
+    }],
+    "bossTalk": {
+      "heading": "Global Logistics Solutions",
+      "description": "SJIUS Supply Chain is a comprehensive international import and export enterprise primarily engaged in international road transportation, warehousing solutions, supply chain finance, container depots and other related import and export activities. Based on the current market situation, SJIUS operates <span class='text-black text-2xl'>FIVE AUTOMOBILE WAREHOUSES</span> located in China, Germany, Belgium, Kyrgyzstan, and Kazakhstan, with China serving as the central hub radiating across the Eurasian continent.<br/><br/>SJIUS has connected five major automotive warehouses with <span class='text-black text-2xl'>100</span> heavy-duty freight vehicles heavy-duty freight vehicles. By integrating comprehensive supply chain finance, overseas container depots, and a professional customs clearance team, we have established a supply chain network spanning Central-Asia - the Caucasus - Belarus - EU region, providing robust support for numerous domestic and international import and export traders and offering efficient and customized professional supply chain services.",
+      "signature": {
+        "name": "Deng Nan CEO",
+        "imageAlt": "Boss Signature"
+      }
+    },
+    "sectionIntro": {
+    "cards": [
+      {
+        "title": "Our<br>Logistics Specialists",
+        "description": "Our 131 employees consist of 23 from China, 35 from Germany, 26 from Belgium, 15 from Kyrgyzstan, 19 from Kazakhstan, 5 from Georgia and 8 from Hungary.",
+        "learnMore": "Learn More",
+        "bgUrl": "fast",
+        "img": "imgs/team.png",
+        "href": "/cargo"
+      },
+      {
+        "title": "Our<br> Vision",
+        "description": "We incorporate the 'Belt and Road' Initiative into our vision and are committed to international automobile trading and the broader objectives of the BR Initiative.",
+        "learnMore": "Learn More",
+        "bgUrl": "tracking",
+        "img": "imgs/tracking.png",
+        "href": "/depots"
+      }
+    ],
+      "heading": "Providing Logistics Solutions for Enterprises to Solve Any Delivery Issues",
+      "subtitle": "Contact Us for a Quote"
+    },
+    "form": {
+      "notNull": "Content cannot be empty.",
+      "notLong": "Cannot exceed 30 characters.",
+      "illegal": "Cannot contain illegal characters.",
+      "robot": "Please select 'I am not a robot' verification.",
+      "wait": "Please wait for the verification to complete.",
+      "response": "You have successfully submitted. Our customer service team will contact you shortly.",
+      "lang": {
+      "label": "I am not a robot",
+      "verified": "Verification successful",
+      "verifying": "Verifying",
+      "error": "An error occurred, please check the service",
+      "expired": "Timeout, please check your network"
+      },
+      "query": {
+        "name": "Name",
+        "phone": "Phone",
+        "tab": "Logistics Tracking",
+        "label": "Enter Logistics Code",
+        "description": "Enter your tracking number, separated by semicolons or the Enter key.",
+        "submit": "Submit",
+        "sidetitle": "Global Tracking System",
+        "sidedescription": "Our global land logistics tracking system offers efficient, secure, and traceable cargo transportation services. The system supports real-time updates on transportation status, allowing clients to monitor freight locations timely and ensuring transparency in the shipping process. It enhances transportation efficiency and reduces shipping time through intelligent scheduling and route optimization. Additionally, all information is encrypted to ensure data security and privacy. Focusing on land transportation services, we provide reliable shipping solutions that ensure the safety and timeliness of goods during transit, catering to the diverse needs of various scales and requirements."
+      }
+    },
+    "chart": {
+      "title": "Customer Satisfaction<br><span class='color-customer-red'>Far Exceeds</span> Industry Average",
+      "one": "On-Time Delivery Rate",
+      "two": "Cargo Safety Assurance",
+      "three": "Response Speed"
+    },
+    "cargo":{
+      "services": {
+    "title": "International Road Freight Services",
+    "description": "Professional team and intelligent logistics system\nLogistics solutions\nSafe and timely delivery"
+      },
+      "map": {
+          "title": "Transportation Routes",
+          "description": "Our current services cover Asia, Central Asia and Europe."
+      },
+      "hero": {
+        "title": "Our Advantages",
+        "cards": [
+          {
+            "name": "Professional Qualifications",
+            "des": "With TIR international road transport qualifications, we provide efficient, safe, and compliant cross-border transport services, presenting our professional expertise and ensuring seamless global logistics."
+          },
+          {
+            "name": "Flexible Solutions",
+            "des": "We specialize in offering flexible and efficient logistics solutions, delivering professional road transport services to meet diverse needs, helping businesses reduce costs and enjoy worry-free experiences."
+          },
+          {
+            "name": "Safety and On-Time",
+            "des": "Committed to cross-border road freight services, we ensure the safe and timely delivery of goods with our professional team and advanced network, providing you with reliable and efficient solutions."
+          }
+        ]
+      },
+      "workflow": {
+        "title": "Leveraging Our Fleet and Partnered Carriers",
+        "steps": [
+          {
+            "icon": "ant-design:bar-chart-outlined",
+            "title": "Powered by TIR International Road Transport Certification",
+            "description": "Expert team and intelligent logistics system"
+          },
+          {
+            "icon": "ant-design:sketch-outlined",
+            "title": "Providing Flexible",
+            "description": "Logistics Solutions"
+          },
+          {
+            "icon": "ant-design:pie-chart-outlined",
+            "title": "Ensuring Goods",
+            "description": "Arrive Safely and On Time"
+          }
+        ],
+        "footer": "We help customers streamline their logistics operations, reduce costs, and enhance their market competitiveness through our efficient logistics services."
+      },
+      "advantages": {
+        "subtitle": "International Road Transportation",
+        "title": "Advantages of International Road Transportation",
+        "more": "SJIUS owns 100 heavy-duty freight trucks dedicated to international road transport services. Our business covers transport management, warehousing, customs clearance, and documentation processing, ensuring efficient and reliable supply chain management to meet the comprehensive needs of customers and the market.",
+        "description": "International road transportation is trusted by customers for its efficiency, flexibility, and cost-effectiveness. With an extensive transport network, we achieve fast cross-border delivery without transshipment, offering direct point-to-point service that saves time and reduce costs. Compared to other transportation methods, road transport provides route flexibility, allowing for tailored adjustments to meet customer needs. Using advanced GPS tracking technology, we monitor goods in real-time to ensure safety. Whether for small shipments or bulk transportation, we meet diverse needs and empower businesses to efficiently connect with global markets."
+      },
+      "features": [
+        {
+          "number": "01",
+          "title": "TIR International Transport Certification",
+          "description": "We hold TIR international transport certification, allowing us to provide efficient cross-border transportation services. Through the TIR system, goods can be transported directly to their destination in a sealed state, eliminating the need for intermediate inspections. This significantly reduces customs clearance procedures and time, thereby enhancing transportation efficiency. Additionally, TIR certification minimizes potential extra costs during transport, saving money for our customers. Whether for international trade or cross-border logistics, our professional and efficient services help clients achieve seamless goods flow and fast delivery to meet global transport demands.",
+          "image": "imgs/u04.jpg"
+        },
+        {
+          "number": "02",
+          "title": "Professional Team",
+          "description": "We have a highly experienced and professional team dedicated to delivering premium logistics services. Our rigorously trained team members excel in international transport regulations and processes, effectively managing complex logistics challenges. From solution design to transport execution, we monitor every step to ensure each shipment arrives safely and on time. Whether for customs clearance, warehousing, or specialized cargo transport, we provide tailored solutions with professionalism and precision to support your business growth, positioning ourselves as a trusted logistics partner.",
+          "image": "imgs/u02.jpg"
+        },
+        {
+          "number": "03",
+          "title": "Port Consolidation Warehouse",
+          "description": "We specialize in providing professional port consolidation warehouse services, creating efficient and convenient logistics solutions. Located in prime port areas with excellent facilities, our consolidation warehouses support temporary storage, sorting, distribution, and transit of goods to ensure a smooth cargo flow. Our services cover various freight modes and offer flexible storage terms, intelligent management systems, and a professional warehousing team to ensure the safety of the cargo. Whether for import/export transit or regional cargo distribution, we provide reliable and efficient storage solutions.",
+          "image": "imgs/warehouse.jpg"
+        },
+        {
+          "number": "04",
+          "title": "International Door-to-Door Service",
+          "description": "We specialize in providing professional door-to-door international logistics services, covering the entire transportation process from origin to destination. Our services include front-end pickup to a (self-operated) consolidation warehouse, port customs declaration and transit, cross-border transportation, (self-operated) warehouse pre-clearance preparation to customs supervised warehouses, destination customs clearance, and final delivery to the recipient.",
+          "image": "imgs/u01.jpg"
+        }
+      ] 
+    },
+    "finance": {
+      "hero": {
+        "title": "Supply Chain Financial Services",
+        "description": "We provide comprehensive financial services for import and export trading companies, helping businesses optimize capital management and improve operational efficiency.<br/><br/>With extensive industry experience and strong financial support, we offer flexible financing solutions to ensure our clients receive the best funding support in the global market. Our financial services include car purchase advances, door-to-door freight charges, export tax rebates, and import duties. These services are designed to help businesses reduce financial risks, enhance liquidity, and facilitate smooth cross-border transactions.",
+        "ctaButton": "Contact us"
+      },
+      "services": {
+        "title": "Supply Chain Financial Services",
+        "items": [
+          {
+            "title": "Funding for Vehicle Purchases",
+            "description": "We provide vehicle purchase financing solutions. After clients pay the purchase deposit, we offer funding for vehicle purchases and arrange delivery to the destination. Clients only need to pay the remaining balance before picking up the vehicle."
+          },
+          {
+            "title": "Shipping Charges",
+            "description": "We offer transportation financing services, advancing international freight costs and providing door-to-door freight payment solutions. Clients only need to pay the freight charges in full before picking up vehicles."
+          },
+          {
+            "title": "Export Tax Rebate",
+            "description": "We provide export tax rebate financing services for the automotive industry, helping clients recover export tax rebate funds in advance."
+          },
+          {
+            "title": "Import Duty Solutions",
+            "description": "We provide financing services in destination countries to assist clients with import duty payments. Clients only need to pay the import duties at the time of vehicle pick-up."
+          }
+        ]
+      },
+      "whyChooseUs": {
+        "badge": "Why Choose Us",
+        "title": "We offer professional freight financial services, including vehicle purchase financing, door-to-door freight charges, export tax rebates, and import duties. Our comprehensive support helps clients operate efficiently, reduce costs, and enhance competitiveness!",
+        "ctaButton": "Contact us now"
+      },
+      "intro": [
+        "Vehicle Purchase Funding",
+        "Freight Payments",
+        "Export Tax Rebate",
+        "Import Duties Financing"
+      ]
+    },
+    "house": {
+      "sections": {
+        "heading": "Supporting Services",
+        "subtitle": "Our professional and efficient supporting services cover general logistics, vehicle maintenance, document management and more. We help enterprises to operate efficiently with one-stop, worry-free solutions!",
+        "cards": [
+          {
+            "title": "Short-distance Transport Fleet",
+            "description": "We have an efficient and reliable short-distance transport fleet dedicated to providing customers with fast, safe, and economical transportation services. Our fleet services cover a wide range, focusing on inter-city and regional cargo transfer and delivery, ensuring the timely delivery of goods. The company has an experienced team of drivers and modern vehicle equipment to meet the diverse needs of our customers. Adhering to the principle of operating with integrity and providing supreme services, we offer customized logistics solutions to help your business operate efficiently. Choosing us and enjoy worry-free, efficient services!",
+            "image": "imgs/c04.jpg",
+            "imageAlt": "ecommerce"
+          },
+          {
+            "title": "Vehicle Inspection Services",
+            "description": "We provide professional and efficient vehicle inspection services to ensure smooth and secure logistics transportation. We conduct  thorough inspections throughout the entire vehicle gate-in and gate-out process to ensure flawless operations. Our services include exterior inspections, functionality tests and cargo safety inspections to guarantee each vehicle is delivered in its optimal condition.",
+            "image": "imgs/warehouse01.jpg",
+            "imageAlt": "ecommerce",
+            "reversed": true
+          },
+          {
+            "title": "Document Preparation",
+            "description": "We provide a full range of vehicle-related documentation services at exporting ports with proper storage and classification of relevant documents according to international transportation requirements. We guarantee the completeness of exporters’ documents for customs clearance and tax refunds, thereby enhancing the overall trade efficiency.",
+            "image": "imgs/f02.jpg",
+            "imageAlt": "ecommerce"
+          },
+          {
+            "title": "Vehicle Maintenance",
+            "description": "Our services in vehicle supervised warehouses include vehicle washing, charging, refueling, tire pressure checks and periodic vehicle start-ups, ensuring that vehicles stored in warehouses are kept in their optimal condition. The team conducts regular checks on the battery, fuel levels, and tire pressure to ensure each vehicle is ready for use at any time. Moreover, vehicles are periodically started to maintain engine health and prevent potential issues. This comprehensive maintenance contributes to extending vehicle’s lifespan, ensuring its performance and safety.",
+            "image": "imgs/warehouse02.jpg",
+            "imageAlt": "ecommerce",
+            "reversed": true
+          }
+        ]
+      },
+      "cards": {
+        "heading": "Safety Assurance",
+        "subtitle": "We provide professional and efficient one-stop services to offer customers a worry-free and seamless full-process experience!",
+        "info": [
+          {
+            "title": "Comprehensive CCTV Monitoring",
+            "image": "imgs/warehouse03.jpg"
+          },
+          {
+            "title": "24/7 Security Fencing and Patrol",
+            "image": "imgs/warehouse04.jpg"
+          },
+          {
+            "title": "360° Safety Inspection Gates",
+            "image": "imgs/warehouse05.jpg"
+          },
+          {
+            "title": "Systematic Vehicle Inspection Programs",
+            "image": "imgs/warehouse06.jpg"
+          },
+          {
+            "title": "Professional Loading Equipment",
+            "image": "imgs/warehouse07.jpg"
+          }
+        ]
+      }
+    },
+    "depots": {
+        "main": {
+          "title": "Three Self-Operated Depots",
+          "subtitle": "15,000 sqm depot in Malaszewicze, Poland; 9,000 sqm depot in Hamburg, Germany; 10,000 sqm depot in Duisburg, Germany",
+          "descriptions": "SJIUS Supply Chain Group specializes in overseas container depots and international logistics transportation. Its overseas depot business actively responds to the national 'Belt and Road' initiative and is committed to providing international railway transportation, container storage and trading in Europe, multimodal transport, and other one-stop full-service supply chain solutions for import and export traders as well as freight forwarding companies.",
+          "action": {
+            "name": "Learn More",
+            "href": "location"
+          },
+          "button": {
+            "name": "Contact Us",
+            "href": "/us"
+          }
+        },
+        "hero": {
+          "title": "About SJIUS",
+          "descriptions": "Our company has established six self-operated container depots overseas: 15,000 square meters in Małaszewicze, Poland; 30,000 square meters in Łódź, Poland; 9,000 square meters in Hamburg, Germany; 10,000 square meters in Duisburg, Germany; 30,000 square meters in Budapest, Hungary; and 10,000 square meters in Poti, Georgia. SJIUS Supply Chain Group specializes in overseas container depots and international logistics transportation. Its overseas depot business actively responds to the national 'Belt and Road' initiative and is committed to providing international railway transportation, container storage and trading in Europe, multimodal transport, and other one-stop full-service supply chain solutions for import and export traders as well as freight forwarding companies."
+        },
+        "locations": [
+            {
+                "tab": "Małaszewicze",
+                "name": "Poland Mara Depot - Self-operated",
+                "icon": "circle-flags:pl",
+                "area": {"name": "Area", "size": "70000"},
+                "distance": {"name": "Distance to Mara Railway Station", "description": "7Km"},
+                "workers": {"name": "Local Employees", "description": "9 operators"},
+                "containers": {"name": "40HQ Container", "description": "4600 units"},
+                "img": "imgs/d01.jpeg"
+            },
+            {
+                "tab": "Łódź",
+                "name": "Poland Łódź Depot - Self-operated",
+                "icon": "circle-flags:pl",
+                "area": {"name": "Area", "size": "10000"},
+                "distance": {"name": "Distance to Mara Railway Station", "description": "7Km"},
+                "workers": {"name": "Local Employees", "description": "3 operators"},
+                "containers": {"name": "40HQ Container", "description": "600 units"},
+                "img": "imgs/d05.jpeg"
+            },
+            {
+                "tab": "Hamburg",
+                "name": "Germany Hamburg Depot - Self-operated",
+                "icon": "circle-flags:de",
+                "area": {"name": "Area", "size": "9000"},
+                "distance": {"name": "Distance to Hamburg Port", "description": "3Km"},
+                "workers": {"name": "Local Employees", "description": "7 operators"},
+                "containers": {"name": "40HQ Container", "description": "1000 units"},
+                "img": "imgs/d02.jpg"
+            },
+            {
+                "tab": "Duisburg",
+                "name": "Germany Duisburg Depot - Self-operated",
+                "icon": "circle-flags:de",
+                "area": {"name": "Area", "size": "120000"},
+                "distance": {"name": "Distance to Duisburg Station", "description": "8Km"},
+                "workers": {"name": "Local Employees", "description": "8 operators"},
+                "containers": {"name": "40HQ Container", "description": "8000 units"},
+                "img": "imgs/d03.jpg"
+            },
+            {
+                "tab": "Budapest",
+                "name": "Hungary Budapest Depot - Self-operated",
+                "icon": "circle-flags:hu",
+                "area": {"name": "Area", "size": "30000"},
+                "distance": {"name": "Distance to Nearest Port", "description": "8Km"},
+                "workers": {"name": "Local Employees", "description": "8 operators"},
+                "containers": {"name": "40HQ Container", "description": "2000 units"},
+                "img": "imgs/d06.jpg"
+            },
+            {
+                "tab": "Poti",
+                "name": "Georgia Poti Depot - Self-operated",
+                "icon": "circle-flags:ge",
+                "area": {"name": "Area", "size": "10000"},
+                "distance": {"name": "Distance to Nearest Port", "description": "10Km"},
+                "workers": {"name": "Local Employees", "description": "5 operators"},
+                "containers": {"name": "40HQ Container", "description": "600 units"},
+                "img": "imgs/d07.jpg"
+            }
+        ],
+        "features": {
+          "heading": "Our Advantages",
+          "title": "Chinese-Style Depot Management Model: High Site Utilization and Low Costs",
+          "subtitle": "Combining Rubber-Tired Gantry Cranes (RTGs) with Reach Stackers (forklifts) improves container storage density. This approach requires relatively low equipment investment and maintenance costs, making it suitable for different scales of demand.",
+          "cards": [
+            {
+              "title": "Container Repair Advantages",
+              "description": "We possess state-of-the-art equipment for container repair and cleaning, and have employed skilled technicians to promptly address any container damages. Our dedicated in-house repair team enhances efficiency while significantly lowering costs, providing our clients with more affordable services.",
+              "icon": "ant-design:tool-outline"
+            },
+            {
+              "title": "Container Trading Advantages",
+              "description": "We collaborate with partner fleets to ensure efficient and smooth container return and sales processes, addressing container trading challenges and providing convenient trading services.",
+              "icon": "ant-design:slack-outlined"
+            },
+            {
+              "title": "Specialized Depot Equipment",
+              "description": "High-performance depot equipment, imported from the Netherlands, guarantees superior quality and cutting-edge technology. These machines, specifically engineered for container depots, offer outstanding stacking capabilities and operational efficiency, greatly improving overall depot productivity.",
+              "icon": "ant-design:api-outlined"
+            },
+            {
+              "title": "Self-Operated and Partner Fleets",
+              "description": "We operate our own fleet to provide efficient and reliable transportation services while also partnering with several professional logistics companies to create a strong transportation network. This blend of self-management and collaboration enables us to flexibly allocate resources, accommodate various customer requirements, and guarantee the safe and timely delivery of cargo.",
+              "icon": "ant-design:global-outlined"
+            }
+          ]
+        },
+        "selfOwnedContainers": {"name": "Self-owned Containers", "des": "1,200 units"},
+        "callableContainers": {"name": "Available Containers to Operate", "des": "3,000 units"},
+        "annualLoadingCapacity": {"name": "Annual Loading Capacity", "des": "70,000 tons"},
+        "title":"Introduction to self-operated depots",
+        "container":"self-owned containers"
+    },
+    "contact": {
+  "title": "Contact Us",
+  "address": [
+    "China (SiChuan ShuangLiu) Used Car Export Base",
+    "South Section of Chengshuang Avenue No. 1599, Shuangliu District (Sichuan, Shuangliu)",
+    "Chengdu, Sichuan Province",
+    "China"
+  ],
+  "phone": "400-093-3939",
+  "email": "inquiry@cdsjius.com",
+  "message": "Contact us for quotes or any other inquiries.",
+  "form": {
+    "label": "Select us for reliable and efficient delivery every time. Your trust is our strongest inspiration!",
+    "fields": {
+      "area": "Country code",
+      "name": "Your Name",
+      "phone": "Your Phone Number",
+      "comments": "Your Inquiries",
+      "submit": "Submit"
+    }
+  },
+  "about": {
+    "title": "About SJIUS",
+    "description": "SJIUS Supply Chain Group is a comprehensive enterprise primarily engaged in overseas automotive warehousing, supplemented by supply chain financial services, international self-operated container depots and other import and export supply chain businesses. We provide robust support for numerous domestic and international import and export traders, offering efficient and customized professional supply chain services."
+  },
+  "services": [
+    {
+      "title":"国际公路货运服务<br/>Internation Road Transportion Services<br/>",
+      "description": "Professional team and intelligent logistics system<br>Logistics solutions<br>Safe and on-time delivery",
+      "href": "/cargo",
+      "img": "uscargo"
+    },
+    {
+      "title":"监管仓服务<br/>Supervised Warehouse Services<br/>",
+      "description": "Professional supervised warehousing services<br>Efficiency and security guaranteed<br>Making the cargo flow smoother and more reliable!",
+      "href": "/warehouse",
+      "img": "uswarehouse"
+    },
+    {
+      "title":"堆场服务<br/>Depots Services<br/>",
+      "description": "Efficient depot management<br>Professional equipment<br>Providing one-stop container storage and repositioning services!",
+      "href": "/depots",
+      "img": "usdepots"
+    },
+    {
+      "title":"供应链金融服务<br/>Supply Chain Financial Services<br/>",
+      "description": "Flexible and efficient funding<br>Supporting clients operations<br>Create values together",
+      "href": "/finance",
+      "img": "usfinance"
+    }
+    ]},
+    "header": {
+      "keywords": "Southwest Cross-border Logistics, Chengdu Cross-border Logistics, Cross-border Freight, European Freight, Overseas Bonded Warehouse, Overseas Yard, Supply Chain Finance, SJIUS",
+      "description": "Providing professional European and Central Asia automotive freight services, including customs clearance, bonded warehouses, yards, and supply chain finance. Safe, efficient, and reliable cross-border logistics solutions.",
+      "title": "SJIUS - Your Cross-border Logistics Partner",
+      "ogtitle": "Professional Eurasian Road Freight | Customs Clearance | Supply Chain Finance",
+      "ogdescription": "Professional European and Central Asia automotive freight services with comprehensive logistics solutions."
+    },
+    "news": {
+      "hot": "Hot",
+      "new": "Latest",
+      "recommend": "Recommended",
+      "more":"More"
+    }    
+}

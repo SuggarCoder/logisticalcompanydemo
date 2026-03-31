@@ -1,0 +1,4 @@
+# robots.txt for a crawler-friendly website
+
+User-agent: *
+Disallow:
